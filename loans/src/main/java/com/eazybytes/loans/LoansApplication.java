@@ -1,0 +1,40 @@
+package com.eazybytes.loans;
+
+import io.swagger.v3.oas.annotations.ExternalDocumentation;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Contact;
+import io.swagger.v3.oas.annotations.info.Info;
+import io.swagger.v3.oas.annotations.info.License;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
+
+@SpringBootApplication
+@EnableJpaAuditing(auditorAwareRef = "auditAwareImpl")
+@OpenAPIDefinition(
+		info = @Info(
+				title = "Loan microservice Rest API Documentation",
+				description = "Home Loan microservice Rest API Documentation",
+				version = "V1",
+				contact = @Contact(
+						name = "Hole Loan",
+						email = "sbi.supprt@gmail.com",
+						url = "https://onlinesbi.sbi"
+				),
+				license = @License(
+						name = "Apache 2.0",
+						url = "https://onlinesbi.sbi"
+				)
+		),
+		externalDocs = @ExternalDocumentation(
+				description = "Home Loan microservice Rest API Documentation",
+				url = "https://onlinesbi.sbi"
+		)
+)
+public class LoansApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(LoansApplication.class, args);
+	}
+
+}
