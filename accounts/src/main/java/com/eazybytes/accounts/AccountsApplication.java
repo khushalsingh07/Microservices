@@ -30,6 +30,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 				description = "SBI Account microservice Rest API Documentation",
 				url = "https://onlinesbi.sbi"
 		)
+
 )
 public class AccountsApplication {
 
