@@ -2,6 +2,7 @@ package com.eazybytes.accounts.dto;
 
 import com.eazybytes.accounts.entity.Accounts;
 import com.eazybytes.accounts.entity.BaseEntity;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
@@ -11,7 +12,14 @@ import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 @Data
+@Schema(
+        name = "Customer",
+        description = "Schema to hold customer and account information"
+)
 public class CustomerDto {
+    @Schema(
+            description = "Name of the customer", example = "Prisha Singh"
+    )
     @NotEmpty(message = "Name can't be null or empty")
     @Size(min = 5, max = 30, message = "The length of the customer name should be between 5 to 30")
     private String name;

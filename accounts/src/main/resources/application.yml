@@ -18,3 +18,14 @@ spring:
       ddl-auto: update
     show-sql: true
 
+build.version: "1.0"
+
+accounts:
+  message: "Welcome in RND on Accounts related API's"
+  contactDetails:
+    name: "Riddhi Singh"
+    email: "riddhi@gmail.com"
+  onCallSupport:
+    -(91) 666-888
+    -(91) 888-777
+
