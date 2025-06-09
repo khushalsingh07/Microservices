@@ -18,21 +18,17 @@ spring:
       ddl-auto: update
     show-sql: true
 
-  profiles:
-    active: prod
-
   config:
-    import:
-      - "application_qa.yml"
-      - "application_prod.yml"
+    activate:
+      on-profile: prod
 
-build.version: "1.0"
+build.version: "3.0"
 
 accounts:
-  message: "Welcome in RND on Accounts related API's"
+  message: "Welcome in RND on Accounts related API's in PROD env"
   contactDetails:
-    name: "Riddhi Singh"
-    email: "riddhi@gmail.com"
+    name: "Shivika Singh"
+    email: "shivika@gmail.com"
   onCallSupport:
     -(91) 666-888
     -(91) 888-777
