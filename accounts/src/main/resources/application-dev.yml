@@ -1,0 +1,9 @@
+logging:
+  level:
+    com:
+      eazybytes:
+        accounts: error
+
+  file:
+    path: /logs
+    name: logs/myLogFile-error.log

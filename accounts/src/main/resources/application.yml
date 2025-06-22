@@ -17,4 +17,19 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+  profiles:
+    active: dev
+    #Pointing to use the application-dev.yml for dev env properties
 
+
+logging:
+  level:
+    root: error
+#    Have specified the log level to debug for our package: com.eazybytes.accounts
+    com:
+      eazybytes:
+        accounts: debug
+
+  file:
+    path: /accounts/logs
+    name: logs/myLogFile.log
